@@ -1,406 +1,623 @@
 
 ***
 
-# <projectName>
+![/Gnu-bash-logo.svg](/Gnu-bash-logo.svg)
 
-![{Project icon} This image failed to load. It may be due to the file not being reached, or a general error. Reload the page to fix a possible general error.](Image.svg)
+### Learning Shell (bash) (programming language)
 
-# By:
+I know a decent amount about the UNIX shell scripting program, but I haven't tested all examples yet. I have learned all of this in my time using Linux since 2020 July 9th.
 
-<!-- ![{Developer name} This image failed to load. It may be due to the file not being reached, or a general error. Reload the page to fix a possible general error.](Image2.svg) !-->
+#### Hello World in Shell
 
-## [Seanpm2001](https://github.com/seanpm2001/), [<developerName>](https://github.com/<developerName>/) Et; Al.
+A Hello World program in BASH shell is very simple, and goes like this:
 
+```shell
+echo ("Hello world");
+```
 
-### Top
+#### Waiting in Shell
 
-# `README.md`
+You can delay actions of commands by the second in Shell, like so:
 
-***
+```shell
+echo ("Resuming in 5 seconds");
+wait 5;
+echo ("Resuming in 10 seconds");
+wait 10;
+echo ("You have wasted 15 seconds of your life. Congratulations!");
+```
+
+#### Exiting in Shell
 
-## Read this article in a different language
+You can force a program to exit after you are done with its script in Shell. Some languages like C support this as well. This is how to do so:
 
-**Sorted by:** `A-Z`
+```shell
+echo ("This program will close in 10 seconds");
+wait 10;
+exit;
+```
 
-[Sorting options unavailable](https://github.com/<developerName>/<repoName>)
+#### Comments in Shell
 
-( [af Afrikaans](/.github/README_AF.md) Afrikaans | [sq Shqiptare](/.github/README_SQ.md) Albanian | [am አማርኛ](/.github/README_AM.md) Amharic | [ar عربى](/.github/README_AR.md) Arabic | [hy հայերեն](/.github/README_HY.md) Armenian | [az Azərbaycan dili](/.github/README_AZ.md) Azerbaijani | [eu Euskara](/.github/README_EU.md) Basque | [be Беларуская](/.github/README_BE.md) Belarusian | [bn বাংলা](/.github/README_BN.md) Bengali | [bs Bosanski](/.github/README_BS.md) Bosnian | [bg български](/.github/README_BG.md) Bulgarian | [ca Català](/.github/README_CA.md) Catalan | [ceb Sugbuanon](/.github/README_CEB.md) Cebuano | [ny Chichewa](/.github/README_NY.md) Chichewa | [zh-CN 简体中文](/.github/README_ZH-CN.md) Chinese (Simplified) | [zh-t 中國傳統的）](/.github/README_ZH-T.md) Chinese (Traditional) | [co Corsu](/.github/README_CO.md) Corsican | [hr Hrvatski](/.github/README_HR.md) Croatian | [cs čeština](/.github/README_CS.md) Czech | [da dansk](README_DA.md) Danish | [nl Nederlands](/.github/README_NL.md) Dutch | [**en-us English**](/.github/README.md) English |  [EO Esperanto](/.github/README_EO.md) Esperanto | [et Eestlane](/.github/README_ET.md) Estonian | [tl Pilipino](/.github/README_TL.md) Filipino | [fi Suomalainen](/.github/README_FI.md) Finnish |  [fr français](/.github/README_FR.md) French | [fy Frysk](/.github/README_FY.md) Frisian | [gl Galego](/.github/README_GL.md) Galician | [ka ქართველი](/.github/README_KA) Georgian | [de Deutsch](/.github/README_DE.md) German | [el Ελληνικά](/.github/README_EL.md) Greek | [gu ગુજરાતી](/.github/README_GU.md) Gujarati | [ht Kreyòl ayisyen](/.github/README_HT.md) Haitian Creole | [ha Hausa](/.github/README_HA.md) Hausa | [haw Ōlelo Hawaiʻi](/.github/README_HAW.md) Hawaiian | [he עִברִית](/.github/README_HE.md) Hebrew | [hi हिन्दी](/.github/README_HI.md) Hindi | [hmn Hmong](/.github/README_HMN.md) Hmong | [hu Magyar](/.github/README_HU.md) Hungarian | [is Íslenska](/.github/README_IS.md) Icelandic | [ig Igbo](/.github/README_IG.md) Igbo | [id bahasa Indonesia](/.github/README_ID.md) Icelandic | [ga Gaeilge](/.github/README_GA.md) Irish | [it Italiana/Italiano](/.github/README_IT.md) | [ja 日本語](/.github/README_JA.md) Japanese | [jw Wong jawa](/.github/README_JW.md) Javanese | [kn ಕನ್ನಡ](/.github/README_KN.md) Kannada | [kk Қазақ](/.github/README_KK.md) Kazakh | [km ខ្មែរ](/.github/README_KM.md) Khmer | [rw Kinyarwanda](/.github/README_RW.md) Kinyarwanda | [ko-south 韓國語](/.github/README_KO_SOUTH.md) Korean (South) | [ko-north 문화어](README_KO_NORTH.md) Korean (North) (NOT YET TRANSLATED) | [ku Kurdî](/.github/README_KU.md) Kurdish (Kurmanji) | [ky Кыргызча](/.github/README_KY.md) Kyrgyz | [lo ລາວ](/.github/README_LO.md) Lao | [la Latine](/.github/README_LA.md) Latin | [lt Lietuvis](/.github/README_LT.md) Lithuanian | [lb Lëtzebuergesch](/.github/README_LB.md) Luxembourgish | [mk Македонски](/.github/README_MK.md) Macedonian | [mg Malagasy](/.github/README_MG.md) Malagasy | [ms Bahasa Melayu](/.github/README_MS.md) Malay | [ml മലയാളം](/.github/README_ML.md) Malayalam | [mt Malti](/.github/README_MT.md) Maltese | [mi Maori](/.github/README_MI.md) Maori | [mr मराठी](/.github/README_MR.md) Marathi | [mn Монгол](/.github/README_MN.md) Mongolian | [my မြန်မာ](/.github/README_MY.md) Myanmar (Burmese) | [ne नेपाली](/.github/README_NE.md) Nepali | [no norsk](/.github/README_NO.md) Norwegian | [or ଓଡିଆ (ଓଡିଆ)](/.github/README_OR.md) Odia (Oriya) | [ps پښتو](/.github/README_PS.md) Pashto | [fa فارسی](/.github/README_FA.md) |Persian  [pl polski](/.github/README_PL.md) Polish | [pt português](/.github/README_PT.md) Portuguese | [pa ਪੰਜਾਬੀ](/.github/README_PA.md) Punjabi | No languages available that start with the letter Q | [ro Română](/.github/README_RO.md) Romanian | [ru русский](/.github/README_RU.md) Russian | [sm Faasamoa](/.github/README_SM.md) Samoan | [gd Gàidhlig na h-Alba](/.github/README_GD.md) Scots Gaelic | [sr Српски](/.github/README_SR.md) Serbian | [st Sesotho](/.github/README_ST.md) Sesotho | [sn Shona](/.github/README_SN.md) Shona | [sd سنڌي](/.github/README_SD.md) Sindhi | [si සිංහල](/.github/README_SI.md) Sinhala | [sk Slovák](/.github/README_SK.md) Slovak | [sl Slovenščina](/.github/README_SL.md) Slovenian | [so Soomaali](/.github/README_SO.md) Somali | [[es en español](/.github/README_ES.md) Spanish | [su Sundanis](/.github/README_SU.md) Sundanese | [sw Kiswahili](/.github/README_SW.md) Swahili | [sv Svenska](/.github/README_SV.md) Swedish | [tg Тоҷикӣ](/.github/README_TG.md) Tajik | [ta தமிழ்](/.github/README_TA.md) Tamil | [tt Татар](/.github/README_TT.md) Tatar | [te తెలుగు](/.github/README_TE.md) Telugu | [th ไทย](/.github/README_TH.md) Thai | [tr Türk](/.github/README_TR.md) Turkish | [tk Türkmenler](/.github/README_TK.md) Turkmen | [uk Український](/.github/README_UK.md) Ukrainian | [ur اردو](/.github/README_UR.md) Urdu | [ug ئۇيغۇر](/.github/README_UG.md) Uyghur | [uz O'zbek](/.github/README_UZ.md) Uzbek | [vi Tiếng Việt](/.github/README_VI.md) Vietnamese | [cy Cymraeg](/.github/README_CY.md) Welsh | [xh isiXhosa](/.github/README_XH.md) Xhosa | [yi יידיש](/.github/README_YI.md) Yiddish | [yo Yoruba](/.github/README_YO.md) Yoruba | [zu Zulu](/.github/README_ZU.md) Zulu ) Available in 110 languages (108 when not counting English and North Korean, as North Korean has not been translated yet [Read about it here](/OldVersions/Korean(North)/README.md))
+Comments in C# are identical to comments in Python, Perl, and other languages.
 
-Translations in languages other than English are machine translated and are not yet accurate. No errors have been fixed yet as of March 21st 2021. Please report translation errors [here](https://github.com/<developerName>/<repoName>/issues/). Make sure to backup your correction with sources and guide me, as I don't know languages other than English well (I plan on getting a translator eventually) please cite [wiktionary](https://en.wiktionary.org) and other sources in your report. Failing to do so will result in a rejection of the correction being published.
+```shell
+# This is a single line comment
+# Shell does not support multi-line comments as far as I know
+```
 
-Note: due to limitations with GitHub's interpretation of markdown (and pretty much every other web-based interpretation of markdown) clicking these links will redirect you to a separate file on a separate page that isn't the intended page. You will be redirected to the [.github folder](/.github/) of this project, where the README translations are hosted.
+#### Shebang in Shell
 
-Translations are currently done with Bing translate and DeepL. Support for Google Translate translations is coming to a close due to privacy concerns.
+Shell has a Shebang that I have not fully memroized yet. It allows the easy detection of Shell scripts, even if the file has no file extension.
 
-***
+```shell
+#!/bin/sh
+echo ("This is a Shell script");
+wait 3;
+exit;
+```
 
-# Index
+#### Break keyword in Shell
 
-[00.0 - Top](#Top)
+```shell
+break;
+```
 
-> [00.1 - Title](#<projectName>)
+To this day, I am still not entirely sure what the `break` keyword does, but most languages support it.
 
-> [00.2 - Read this article in a different language](#Read-this-article-in-a-different-language)
+_/!\ This example has not been tested yet, and may not work_
+
+#### Functions in Shell
+
+Shell supports functions, they are very easy to define. This is how to make one:
+
+```shell
+aFunctionalFunction () { 
+   echo ("This is a functioning functional function");
+   wait 3;
+   break;
+}
+```
+
+#### Returning a function in Shell
+
+This is an expansion to the previous program. Shell supports the `return` keyword, allowing for the return of functions.
+
+```shell
+aFunctionalFunction () { 
+   echo ("This is a functioning functional function");
+   wait 3;
+   break;
+}
+return aFunctionalFunction();
+```
+
+#### Reading from dev/full in Shell
+
+This example comes from my Linux setup repository. It goes over reading from the `dev/full` device, an empty drive that is used for the purpose of testing programs and what they do when the system has no memory.
+
+```shell
+#!/bin/sh
+# Start of script
+echo "dev/full > TESTING.sh - Testing the dev/full device"
+wait 1 # 1 second pause for dramatic reading
+echo "From Wikipedia: dev/full"
+wait 1 # Another 1 second pause for dramatic reading
+echo "In Linux, FreeBSD, NetBSD /dev/full or the always full device is a special file that always returns the error code ENOSPC (meaning \"No space left on device\") on writing, and provides an infinite number of zero bytes to any process that reads from it (similar to /dev/zero). This device is usually used when testing the behaviour of a program when it encounters a \"disk full\" error."
+wait 12 # Gives the user plenty of time to read the text before continuing
+echo "The following example is modified from the primary Wednesday, 2021 October 13th edits of this page."
+wait 4 # Gives the user time to read the text before continuing
+# Testing responses for programs when the user has no available memory
+echo "0" > /dev/full # Is it safe to add a 3rd backslash, like so?: /dev/full/
+wait 3 # SUSPENSE! (mostly if it doesn't work)
+echo "Intended response:"
+wait 1 # 1 second pause for dramatic reading
+echo "bash: echo: write error: No space left on device"
+wait 1 # Yet another 1 second pause for dramatic reading
+echo "I trimmed out the 'hello world' and replaced it with a single zero to indicate the lowest possible value and data size (other than 0 bits) being fed to dev/null"
+wait 5
+break
+exit
+# File info
+# File type: SHell script file (*.sh)
+# File version: 1 (2021, Wednesday, October 13th at 9:40 pm)
+# Line count (including blank lines and compiler line): 27
+# End of script
+```
+
+#### FreeDesktop communication in Shell
+
+##### Reading from upower in FreeDesktop in Shell
+
+Get information on the battery via FreeDesktop.ORG on Linux (tested successfully on Ubuntu 20.04)
+
+```shell
+upower -i /org/freedesktop/UPower/devices/battery_BAT0
+```
+
+#### Calendar in Shell
+
+##### 1752 Calendar reform in Shell
+
+There is a feature in the Shell `cal` (calendar) command, where the year 1752 does a historically accurate change. For context, in 1752, the British Empire and its territories switched from the Julian calendar to the Gregorian calendar. To adjust the days for this change, September 3rd to September 13th 1752 were skipped for this year. This was included into the Calendar command and was pointed out by its developer, although some may consider it a bug, as this calendar change did not happen in all nations (some countries adopted the Gregorian Calendar before or after 1752)
+
+```shell
+#!/bin/sh
+# In 1752, the British Empire and its territories switched from the Julian calendar to the Gregorian calendar. To adjust the days for this change, September 3rd to September 13th 1752 were skipped for this year
+# This was included into the Calendar command and was pointed out by its developer, although some may consider it a bug, as this calendar change did not happen in all nations (some countries adopted the Gregorian Calendar before or after 1752)
+cal 1752
+cal 9 1752
+```
+
+##### UNIX 32 bit Epoch calendar in Shell
+
+This program needs to be optimized, but it intends to show the calendar in every year supported on a 32 bit UNIX system (1970-2038)
+
+```shell
+#!/bin/sh
+cal 1970 # Start of the UNIX epoch
+cal 1971
+cal 1972
+cal 1973
+cal 1974
+cal 1975
+cal 1976
+cal 1977
+cal 1978
+cal 1979
+cal 1980
+cal 1981
+cal 1982
+cal 1983
+cal 1984
+cal 1985
+cal 1986
+cal 1987
+cal 1988
+cal 1989
+cal 1990
+cal 1991
+cal 1992
+cal 1993
+cal 1994
+cal 1995
+cal 1996
+cal 1997
+cal 1998
+cal 1999
+cal 2000
+cal 2001
+cal 2002
+cal 2003
+cal 2004
+cal 2005
+cal 2006
+cal 2007
+cal 2008
+cal 2009
+cal 2010
+cal 2011
+cal 2012
+cal 2013
+cal 2014
+cal 2015
+cal 2016
+cal 2017
+cal 2018
+cal 2019
+cal 2020
+cal 2021
+cal 2022
+cal 2023
+cal 2024
+cal 2025
+cal 2026
+cal 2027
+cal 2028
+cal 2029
+cal 2030
+cal 2031
+cal 2032
+cal 2033
+cal 2034
+cal 2035
+cal 2036
+cal 2037
+cal 2038 -1 # Y2K38 bug on 32 bit UNIX occurs on January 19th 2038 at 03:14:07 UTC (I am unsure if this line will crash a 32 bit UNIX Machine, as -1 goes past January 19th)
+# cal 2039
+# cal 2040
+# There has to be a simpler way to do this, possibly similar to this:
+# cal 1970 to 2037, 2038 -1 # pseudocode
+```
+
+#### Installing programs in Shell
+
+##### Installing programs in Fedora Linux in Shell
+
+This is a script for installing VLC Media Player under Fedora Linux (modern)
+
+```shell
+# Start of script
+
+# This script is an installer script for desktop environments
+
+# Script version: 1 (Saturday, June 27th 2020 at 4:27 pm
+# File type: BASH shell script (*.sh)
+# Line count (including blank lines): 17
+
+# My default Desktop Environment
+dnf install @kde-desktop # Installs the KDE desktop environment
+
+# Some optional desktop environments
+dnf install @xfce # Installs the XFCE Desktop environment
+dnf install @gnome # Installs the GNOME desktop environment
+
+# End of script
+```
+
+##### Installing programs in Debian Linux in Shell
+
+This is a script for installing VLC Media Player under Ubuntu Linux (Debian)
+
+```shell
+# Start of script
+
+# This script is an installer script for desktop environments
+
+# Script version: 1 (Saturday, June 27th 2020 at 4:27 pm
+# File type: BASH shell script (*.sh)
+# Line count (including blank lines): 17
+
+# My default Desktop Environment
+dnf install @kde-desktop # Installs the KDE desktop environment
+
+# Some optional desktop environments
+dnf install @xfce # Installs the XFCE Desktop environment
+dnf install @gnome # Installs the GNOME desktop environment
+
+# End of script
+```
+
+#### Updating programs in Shell
+
+##### Updating programs in Fedora
 
-> [00.3 - Index](#Index)
+This script updates 3 different desktop environments (KDE, XFCE, and GNOME) in Fedora Linux using the DNF command.
 
-[01.0 - Description](#RepositoryName)
+```shell
+# Start of script
 
-[02.0 - About](#About)
+# This script is an installer script for desktop environments
 
-[03.0 - Wiki](#Wiki)
+# Script version: 1 (Friday, 2021 November 26th at 3:33 pm
+# File type: BASH shell script (*.sh)
+# Line count (including blank lines): 17
 
-[04.0 - History](#History)
+# My default Desktop Environment
+sudo apt-install @kde-desktop # Installs the KDE desktop environment
 
-> [04.1 - Pre-history](#Pre-history)
+# Some optional desktop environments
+sudo apt-install @xfce # Installs the XFCE Desktop environment
+sudo apt-install @gnome # Installs the GNOME desktop environment
 
-> [04.2 - Alpha History](#Alpha-history)
+# End of script
+```
 
-> [04.3 - Beta History](#Beta-history)
+##### Updating programs in Ubuntu
 
-> [04.4 - Modern History](#Modern-history)
+This script updates 3 different desktop environments (KDE, XFCE, and GNOME) in Ubuntu Linux using the APT command.
 
-[05.0 - Copying](#Copying)
+```shell
+# Start of script
 
-[06.0 - Credits](#Credits)
+# This script is an updater script for desktop environments
 
-[07.0 - Installation](#Installation)
+# Script version: 1 (Friday, 2021 November 26th at 3:30 pm)
+# File type: BASH shell script (*.sh)
+# Line count (including blank lines): 17
 
-[08.0 - Version history](#Version-history)
+# My default Desktop Environment
+sudo apt-update @kde-desktop # Updates the KDE desktop environment
 
-[09.0 - Version history](#Version-history)
+# Some optional desktop environments
+sudo apt-update @xfce # Updates the XFCE Desktop environment
+sudo apt-update @gnome # Updates the GNOME desktop environment
 
-[10.0 - Software status](#Software-status)
+# End of script
+```
 
-[11.0 - Sponsor info](#Sponsor-info)
 
-[12.0 - Contributers](#Contributers)
+#### Forkbombs in Shell
 
-[13.0 - Issues](#Issues)
+**WARNING!** - This program is malicious, and is here for educational purposes. Make sure to run this in a virtual machine only. If you run it on your main system, it will bring your system down. If you place it in the startup folder, it will destroy your system installation.
 
-> [13.1 - Current issues](#Current-issues)
+This is a classic Shell forkbomb, a process that will keep duplicating itself until your computer runs out of resources and crashes.
 
-> [13.2 - Past issues](#Past-issues)
+```shell
+fork() {
+    fork | fork &
+}
+fork
+```
 
-> [13.3 - Past pull requests](#Past-pull-requests)
+#### Completely wiping Google Chrome from Linux in Shell
 
-> [13.4 - Active pull requests](#Active-pull-requests)
+I do not want Google Chrome on any of my systems. This script is for deleting the source browser, and destroying all files related to it. It needs some improvement.
 
-[14.0 - Resources](#Resources)
+##### Destroy Google Chromium in Shell
 
-[15.0 - Contributing](#Contributing)
+```shell
+# Start of script
 
-[16.0 - About README](#About-README)
+# This script will delete the Google Chromium spyware, instead of just uninstalling it through the software center. You should purge all of its files as well.
 
-[17.0 - README Version history](#README-version-history)
+# For Ubuntu 18.04 and above
 
-[18.0 - Footer](#You-have-reached-the-end-of-the-README-file)
+sudo apt purge chromium-browser # This will purge the Chromium browser
 
-> [18.9 - End of file](#EOF)
+mv ~/.config/chromium/ ~/.config/chromium.bak/
 
-***
+# For Ubuntu 17.10 and below
 
-# <repoName>
-<repo_description>
+sudo apt-get purge chromium-browser # This will purge the Chromium browser
 
-***
+mv ~/.config/chromium/ ~/.config/chromium.bak/
 
-## About
+# Source from: https://askubuntu.com/questions/82186/how-do-i-completely-uninstall-google-chrome-and-chromium
 
-See above. <extendedRepoDescription>
+# File info
 
-***
+# File version: 1 (Wednesday, July 15th 2020 at 10:05 am)
 
-## Wiki
+# File type: Bash shell script (*.sh)
 
-[Click/tap here to view this projects Wiki](https://github.com/<developerName>/<repoName>/wiki)
+# Line count (including blank lines and compiler line): 29
 
-If the project has been forked, the Wiki was likely removed. Luckily, I include an embedded version. You can view it [here](/External/ProjectWiki/).
+# End of script
+```
 
-***
+##### Destroying Google Chrome in Shell
 
-## History
+I do not want Google Chrome on any of my systems. This script is for deleting the main browser, and destroying all files related to it. It needs some improvement.
 
-Write about this projects history here.
+```shell
+# Start of script
 
-### Pre-history
+# This script removes the malware/bloat program Google Chrome that comes preinstalled with Ubuntu 20.04 now.
 
-No pre-history to show for this project.
+# Google Chrome removal
 
-### Alpha history
+sudo apt-get remove google-chrome-stable # Removes Google chrome
 
-No Alpha history to show for this project.
+# Now it is time to burn everything that Google put on your computer
 
-### Beta history
+sudo apt-get purge google-chrome-stable # Purges the remaining contents
+sudo apt-get autoremove # Further purges the remaining contents
+rm -rf ~/.config/google-chrome # Removes the rest of the config data, you should be good from this point
+sudo rm -rf ~/.config/google-chrome # Removes the rest of the config data, you should be good from this point. Sudo was added in case it was required
 
-No Beta history to show for this project.
+# File info:
 
-### Modern history
+# File type: Bash Shell script (*.sh)
 
-No Modern history to show for this project.
+# File version: 1 (Saturday, July 11th 2020 at 7:12 pm)
 
-***
+# Line count (including blank lines): 25
 
-## Copying
+# End of script
+```
 
-View the copying license for this project [here](/COPYING) (if you haven't built the project yet with the makefile, here is the original link: [COPYINGL](/COPYINGL)
+#### Check memory usage in Shell
 
-Please note that you also have to follow the rules of the GNU General Public License v3 (GPL3) which you can view [here](/LICENSE.txt)
+A quick way to check memory in Shell
 
-***
+```shell
+# Start of script
 
-## Credits
+free -h # Shows the current memory usage
 
-View the credits file for this project and see the people who got together to make this project by [clicking/tapping here](/CREDITS)
+# End of script
+```
 
-***
+#### Installing XTERMINAL in Shell
 
-## Installation
+A quick way to install XTERM (X Desktop Environment Terminal) through Shell
 
-View the installation instructions file for this project [here](/INSTALL)
+```shell
+#!/bin/sh
+# xorg goodies - Install xterm
 
-Requirements: Read the instructions for more info, and get the latest up-to-date instructions [here](https://gist.github.com/seanpm2001/745564a46186888e829fdeb9cda584de)
+sudo apt install xterm # Installs the X.Org terminal, as it normally doesn't come installed
+xterm
+# Old program, please use the all-in-one x.org program for better result
+```
 
-***
+#### Disabling SWAP memory in Shell
 
-## Sponsor info
+**WARNING:** - This is a potentially dangerous command. Please do research before running it, it may cause irrepairable damage to your system installation:
 
-![SponsorButton.png](/SponsorButton.png)
+```shell
+# Start of script
 
-You can sponsor this project if you like, but please specify what you want to donate to. [See the funds you can donate to here](https://github.com/seanpm2001/Sponsor-info/tree/main/For-sponsors/)
+sudo swapoff -a
 
-You can view other sponsor info [here](https://github.com/seanpm2001/Sponsor-info/)
+free -h
 
-Try it out! The sponsor button is right up next to the watch/unwatch button.
+# End of script
+```
 
-***
+**WARNING:** - Re-enabling it may not reverse the possible damage caused by disabling it.
 
-## Version history
+```shell
+# Start of script
 
-**Version history currently unavailable**
+sudo swapon -a
 
-**No other versions listed**
+free -h
 
-***
+# End of script
+```
 
-## Software status
+#### Firewall control in Shell
 
-All of my works are free some restrictions. DRM (**D**igital **R**estrictions **M**anagement) is not present in any of my works.
+##### Ubuntu Firewall control in Shell
 
-![DRM-free_label.en.svg](/DRM-free_label.en.svg)
+Enabling and disabling the firewall under Ubuntu Linux.
 
-This sticker is supported by the Free Software Foundation. I never intend to include DRM in my works.
+```shell
+# Start of script
 
-I am using the abbreviation "Digital Restrictions Management" instead of the more known "Digital Rights Management" as the common way of addressing it is false, there are no rights with DRM. The spelling "Digital Restrictions Management" is more accurate, and is supported by [Richard M. Stallman (RMS)](https://en.wikipedia.org/wiki/Richard_Stallman) and the [Free Software Foundation (FSF)](https://en.wikipedia.org/wiki/Free_Software_Foundation)
+# This script enables and disables the Firewall on Ubuntu
 
-This section is used to raise awareness for the problems with DRM, and also to protest it. DRM is defective by design and is a major threat to all computer users and software freedom.
+# This will turn on the firewall. If you want to disable the firewall, enter your root password wrong thrice.
 
-Image credit: [defectivebydesign.org/drm-free/...](https://www.defectivebydesign.org/drm-free/how-to-use-label/)
+sudo ufw enable # Sudo is my current way of a y/n on commands, it is inefficient, and I hope to find an alternate soon
 
-***
+# This will turn off the firewall. If you want to enable the firewall, enter your root password wrong thrice and run this script again.
 
-## Contributers
+sudo ufw disable # Sudo is my current way of a y/n on commands, it is inefficient, and I hope to find an alternate soon
 
-Currently, I am the only contributer. Contributing is allowed, as long as you follow the rules of the [CONTRIBUTING.md](/CONTRIBUTING.md) file.
+# File info
 
-> * 1. [seanpm2001](https://github.com/seanpm2001/) - x commits (As of Yr, DoW, Month, DoM, at ##:## a/pm)
+# File type: Bash shell script (*.sh)
 
-> * 2. No other contributers.
+# File version: 1 (Sunday, July 12th 2020 at 5:05 pm)
 
-***
+# Line count (including blank lines and compiler line): 23
 
-## Issues
+# End of script
+```
 
-### Current issues
+#### Audio repair in Shell
 
-* None at the moment
+Repairing the default audio processes in Shell
 
-* No other current issues
+```shell
 
-If the repository has been forked, issues likely have been removed. Luckily I keep an archive of certain images [here](/.github/Issues/)
+# Start of script
 
-[Read the privacy policy on issue archival here](/.github/Issues/README.md)
+# Method 1 - restore drivers
 
-**TL;DR**
+alsactl restore # This method helped me restore my headphones on July 15th 2020
 
-I archive my own issues. Your issue won't be archived unless you request it to be archived.
+sudo alsactl restore # If you require administrator privileges for this:
 
-### Past issues
+# Method 2 - No other known software methods
 
-* None at the moment
+# Try checking your hardware, make sure it is fully plugged in
 
-* No other past issues
+# File info
 
-If the repository has been forked, issues likely have been removed. Luckily I keep an archive of certain images [here](/.github/Issues/)
+# File version: 1 (Wednesday, July 15th 2020 at 10:10 am)
+# File type: Bash Shell script (*.sh)
+# Line count (including blank lines and compiler line: 21
 
-[Read the privacy policy on issue archival here](/.github/Issues/README.md)
+# End of script
+```
 
-**TL;DR**
+#### XORG Goodies in Shell
 
-I archive my own issues. Your issue won't be archived unless you request it to be archived.
+This Shell script is for testing various XORG programs through Shell. They are typically installed by default on XORG Linux distributions. XTERM however, typically isn't. You will need to re-install it.
 
-### Past pull requests
+```shell
+#!/bin/sh
+# x.org goodies - Common programs
 
-* None at the moment
+# Function list I/O
+xeyesRun() {
+	xeyes
+}
+xtermRun() {
+	xterm
+}
+xcalcRun() {
+	xcalc
+}
+xclockRun() {
+	xclock
+}
+# XTerm installation
+xtermInstallUbuntu16() { # For Ubuntu 16.04 and up
+	sudo apt install xterm
+}
+xtermInstallUbuntu12() { # For Ubuntu 15.10 and below
+	sudo apt-get xterm
+}
+xtermInstallFedora22() { # For Fedora 22 and below
+	yum install xterm
+}
+xtermInstallFedora23() { # For Fedora 23 and up
+	dnf install xterm
+}
+# User input section I/O
 
-* No other past pull requests
+# Part of the set of X.org utilites and programs that come with most Linux systens.
+```
 
-If the repository has been forked, issues likely have been removed. Luckily I keep an archive of certain images [here](/.github/Issues/)
+_/!\ This example has not been tested yet, and may not work_
 
-[Read the privacy policy on issue archival here](/.github/Issues/README.md)
+#### Aliases in Shell
 
-**TL;DR**
+Making an Alias in Shell, making the term `neo` return the `neofetch` command.
 
-I archive my own issues. Your issue won't be archived unless you request it to be archived.
+```shell
+# This file makes the "neo" alias, which will redirect to neofetch
+# Start of script
 
-### Active pull requests
+alias neo="neofetch"
 
-* None at the moment
+# End of script
+# This script is a test of Linux command-line aliases. I noted that there aren't many very important programs you would want to open via Konsole/whatever Terminal you use that have this name, so I applied it to neofetch.
+# File name: Neo~Neofetch.sh
+# File type: Bourne Again Shell Script (*.sh)
+# File version: 1 (Sunday, October 25th 2020 at 5:16 pm)
+# Line count (including blank lines and compiler line): 13
+```
 
-* No other active pull requests
+_/!\ This example has not been tested yet, and may not work_
 
-If the repository has been forked, issues likely have been removed. Luckily I keep an archive of certain images [here](/.github/Issues/)
+#### GNOME Tweaking in Shell
 
-[Read the privacy policy on issue archival here](/.github/Issues/README.md)
+##### Tracker reset hard in Shell
 
-**TL;DR**
+I have to run this command on my first and second Linux laptops every single time I turn it on or restart it, as the process `tracker-miner-fs` keeps getting stuck, and mining the CPU + using a gigabyte of RAM until I kill it:
 
-I archive my own issues. Your issue won't be archived unless you request it to be archived.
+```shell
+tracker reset --hard
+```
 
-***
+After it gives you a warning, type `y` and hit `enter`
 
-## Resources
+##### Changing the GNOME clock in Shell
 
-Here are some other resources for this project:
+**Enabling seconds on the clock:**
 
-[Project language file A](PROJECT_LANG_1.<fileExtensionForProgrammingLanguage>)
+```shell
+gsettings set org.gnome.desktop.interface clock-show-seconds true
+```
 
-[Join the discussion on GitHub](https://github.com/<developerName>/<repoName>/discussions)
+**Disabling seconds on the clock:**
 
-No other resources at the moment.
+```shell
+gsettings set org.gnome.desktop.interface clock-show-seconds false
+```
 
-***
+**Testing seconds on the clock:**
 
-## Contributing
+```shell
+gsettings get org.gnome.desktop.interface clock-show-seconds
+```
 
-Contributing is allowed for this project, as long as you follow the rules of the `CONTRIBUTING.md` file.
+#### Other knowledge of BASH Shell
 
-[Click/tap here to view the contributing rules for this project](/CONTRIBUTING.md)
+1. Shell uses the `*.sh` file extension
 
-***
+2. Shell is a curly bracket and semicolon language
 
-## About README
+3. **BASH** stands for **B**ourne **A**gain **SH**ell
 
-**File type:** `Markdown Document (*.md *.mkd *.markdown)`
+4. Shell support is default in most Linux and BSD distributions (notably Ubuntu, Arch, MacOS, Manjaro, Fedora, etc.), but is not supported by default in Microsoft Windows
 
-**File version:** `0.1.6 (Monday, August 23rd 2021 at 6:37 pm)`
-
-**Line count (including blank lines and compiler line):** `0,407`
-
-***
-
-## README version history
-
-Version 0.1 (Sunday, March 21st 2021 at 7:50 pm)
-
-> Changes:
-
-> * Started the file
-
-> * Added the title section
-
-> * Added the index
-
-> * Added the about section
-
-> * Added the Wiki section
-
-> * Added the version history section
-
-> * Added the issues section.
-
-> * Added the past issues section
-
-> * Added the past pull requests section
-
-> * Added the active pull requests section
-
-> * Added the contributors section
-
-> * Added the contributing section
-
-> * Added the about README section
-
-> * Added the README version history section
-
-> * Added the resources section
-
-> * Added a software status section, with a DRM free sticker and message
-
-> * Added the sponsor info section
-
-**ITERATION 5**
-
-> * Updated the title section
-
-> * Updated the index
-
-> * Added the history section
-
-> * Updated the file info section
-
-> * Updated the file history section
-
-**ITERATION 6**
-
-> * Updated the title section
-
-> * Fixed and update template links
-
-> * Updated the index
-
-> * Added the copying section
-
-> * Added the credits section
-
-> * Added the installation section
-
-> * Updated the resources section
-
-> * Updated the contributors section
-
-> * Added the technical notes section
-
-> * Updated the footer
-
-> * Updated the file info section
-
-> * Updated the file history section
-
-> * No other changes in version 0.1
-
-Version 1 (Coming soon)
-
-> Changes:
-
-> * Coming soon
-
-> * No other changes in version 1
-
-Version 2 (Coming soon)
-
-> Changes:
-
-> * Coming soon
-
-> * No other changes in version 2
-
-***
-
-### You have reached the end of the README file
-
-( [Back to top](#Top) | [Exit to GitHub](https://github.com) | [Exit to Bing](https://www.bing.com/) | [Exit to DuckDuckGo](https://duckduckgo.com/) | [Exit to Ecosia](https://www.ecosia.org) )
-
-### EOF
+5. No other knowledge of the BASH shell programming language
 
 ***
