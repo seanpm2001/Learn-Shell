@@ -2,15 +2,15 @@
 
 # This script is an installer script for desktop environments
 
-# Script version: 1 (Saturday, June 27th 2020 at 4:27 pm
+# Script version: 1 (Friday, 2021 November 26th at 3:33 pm
 # File type: BASH shell script (*.sh)
 # Line count (including blank lines): 17
 
 # My default Desktop Environment
-dnf install @kde-desktop # Installs the KDE desktop environment
+sudo apt-install @kde-desktop # Installs the KDE desktop environment
 
 # Some optional desktop environments
-dnf install @xfce # Installs the XFCE Desktop environment
-dnf install @gnome # Installs the GNOME desktop environment
+sudo apt-install @xfce # Installs the XFCE Desktop environment
+sudo apt-install @gnome # Installs the GNOME desktop environment
 
 # End of script
